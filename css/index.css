@@ -219,10 +219,10 @@ table {
   transform: translateY(-3.75px) rotate(-90deg);
 }
 @media (min-width: 800px) {
-  .menu-toggle {
+  .container .menu-toggle {
     display: none;
   }
-  .site-nav {
+  .container .site-nav {
     height: auto;
     position: absolute;
     top: 2em;
@@ -231,18 +231,18 @@ table {
     float: right;
     clip-path: initial;
   }
-  .site-nav li {
+  .container .site-nav li {
     display: inline-block;
     border: none;
   }
-  .site-nav a {
+  .container .site-nav a {
     padding: 0;
     margin-left: 1em;
   }
-  .site-nav a:hover {
+  .container .site-nav a:hover {
     background: transparent;
   }
-  .site-nav .site-nav--icon {
+  .container .site-nav .site-nav--icon {
     display: none;
   }
 }

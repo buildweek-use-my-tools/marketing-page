@@ -99,38 +99,38 @@
   .open .hamburger::after {
     transform: translateY(-3.75px) rotate(-90deg);
   }
+  @media (min-width: 800px) {
+    .menu-toggle {
+      display: none;
+    }
+  
+    .site-nav {
+      height: auto;
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      background: transparent;
+      float: right;
+      clip-path: initial;
+    }
+  
+    .site-nav li {
+      display: inline-block;
+      border: none;
+    }
+  
+    .site-nav a {
+      padding: 0;
+      margin-left: 1em;
+    }
+  
+    .site-nav a:hover {
+      background: transparent;
+    }
+  
+    .site-nav .site-nav--icon {
+      display:none;
+    }
+  }
 }
 
-@media (min-width: 800px) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .site-nav {
-    height: auto;
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    background: transparent;
-    float: right;
-    clip-path: initial;
-  }
-
-  .site-nav li {
-    display: inline-block;
-    border: none;
-  }
-
-  .site-nav a {
-    padding: 0;
-    margin-left: 1em;
-  }
-
-  .site-nav a:hover {
-    background: transparent;
-  }
-
-  .site-nav .site-nav--icon {
-    display: none;
-  }
-}
