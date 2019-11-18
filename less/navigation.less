@@ -18,6 +18,10 @@
     clip-path: circle(0px at top right);
     -webkit-transition: clip-path ease-in-out 500ms;
     transition: clip-path ease-in-out 500ms;
+
+    @media @tablet {
+      margin-right: 3rem;
+    }
   }
 
   .site-nav--open {
@@ -99,7 +103,7 @@
   .open .hamburger::after {
     transform: translateY(-3.75px) rotate(-90deg);
   }
-  @media (min-width: 800px) {
+  @media @tablet {
     .menu-toggle {
       display: none;
     }

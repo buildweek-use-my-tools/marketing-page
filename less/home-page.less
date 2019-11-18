@@ -4,47 +4,59 @@ body {
 
 header {
   padding: 0 0 2em;
-
+  
   .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
     margin: 0 auto;
-
+    
     p {
       color: #fff;
       font-size: 1.2rem;
       margin: 1.6em auto;
     }
-
+    
     .hero-btn {
       .button(@header-footer, 10px);
       margin: 2em auto;
     }
-
+    
     a {
       text-decoration: none;
       margin: 2em;
       width: 80%;
+      
+      @media @tablet {
+        width: 40%;
+      }
+      
     }
-
+    
     .hero-btn:hover {
       background: @header-footer;
       color: #fff;
       border: 1px solid #fff;
+    }
+    
+    @media @desktop {
+      p {
+        font-size: 2rem;
+      }
     }
   }
 }
 .hero {
   width: 100%;
   background: @main-bg;
+  
 
   img {
     width: 100%;
     margin: 0 auto;
   }
-
+  
   h1 {
     font-size: 2rem;
     line-height: 1.2;
@@ -54,6 +66,36 @@ header {
     padding: 1em;
     color: #fff;
   }
+  
+  @media @desktop {
+    background-image: url(../img/hero-mobile-1600-500.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media @tablet {
+    
+    img {
+      display: none;
+    }
+    
+    background-image: url(../img/hero-mobile-800-500.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    h1 {
+      margin-top: 2em;
+    }
+  }
+  
 }
 
 
@@ -62,7 +104,7 @@ header {
 section {
   background: @main-bg;
   width: 100%;
-
+  
   .team-title {
     text-align: center;
     font-size: 3em;
@@ -70,22 +112,22 @@ section {
     padding-top: 1em;
   }
   
-.card {
+  .card {
   width: 80%;
   margin: 0 auto;
   border-bottom: 1px solid #fff;
-
+  
   h2 {
     font-size: 1.4em;
   }
-
+  
   img {
     border-radius: 50%;
     width: 50%;
     margin: 2em 25%;
     border: 2px solid @header-footer;
   }
-
+  
   .info {
     width: 70%;
     background: #fff;
@@ -104,14 +146,15 @@ section {
       padding: .2em;
       margin: 0 auto;
     }
-
+    
     p {
       margin: 1.3em;
     }
   }
 }
-    article:last-of-type {
-      border-bottom: none;
-    }
+article:last-of-type {
+  border-bottom: none;
+}
 
 }
+
