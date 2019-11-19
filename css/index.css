@@ -285,10 +285,10 @@ header .header-content p {
   margin: 1.6em auto;
 }
 header .header-content .hero-btn {
-  background: #ce8147;
+  background: #fff;
   color: #454851;
-  border: 2px solid #454851;
-  border-radius: 10px;
+  border: 2px solid #fff;
+  border-radius: 25px;
   text-align: center;
   font-size: 1.5rem;
   padding: 2% 0;
@@ -305,9 +305,8 @@ header .header-content a {
   }
 }
 header .header-content .hero-btn:hover {
-  background: #454851;
+  background: #ce8147;
   color: #fff;
-  border: 1px solid #fff;
 }
 @media (min-width: 1000px) {
   header .header-content p {
@@ -362,6 +361,26 @@ section {
   background: #73956f;
   width: 100%;
 }
+section .offer,
+section .offer-info {
+  color: #fff;
+  padding: 1.5em 1.5em 1.5em 3em;
+  margin: 0 auto;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+@media (min-width: 800px) {
+  section .offer,
+  section .offer-info {
+    padding: 2em 4em;
+  }
+}
+@media (min-width: 1000px) {
+  section .offer,
+  section .offer-info {
+    font-size: 1.7rem;
+  }
+}
 section .team-title {
   text-align: center;
   font-size: 3em;
@@ -414,6 +433,9 @@ section article:last-of-type {
     width: 50%;
     border: none;
   }
+  section .info {
+    height: 250px;
+  }
   section .info p {
     margin: 0.5em auto;
   }
@@ -427,7 +449,9 @@ section article:last-of-type {
     width: 30%;
     border: none;
   }
-  section .info p {
+  section .info {
+    width: 100%;
     margin: 0.5em auto;
+    height: 250px;
   }
 }

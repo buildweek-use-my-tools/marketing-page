@@ -20,7 +20,7 @@ header {
     }
 
     .hero-btn {
-      .button(@header-footer, 10px);
+      .button(@header-footer, 25px);
       margin: 2em auto;
     }
 
@@ -35,9 +35,9 @@ header {
     }
 
     .hero-btn:hover {
-      background: @header-footer;
+      background: #ce8147;
       color: #fff;
-      border: 1px solid #fff;
+      // border: 1px solid #fff;
     }
 
     @media @desktop {
@@ -101,6 +101,25 @@ section {
   background: @main-bg;
   width: 100%;
 
+  // ------------------------  Offer Section ----------------------------->
+  .offer,
+  .offer-info {
+    color: #fff;
+    padding: 1.5em 1.5em 1.5em 3em;
+    margin: 0 auto;
+    line-height: 1.2;
+    font-size: 1.2rem;
+
+    @media @tablet {
+      padding: 2em 4em;
+    }
+
+    @media @desktop {
+      font-size: 1.7rem;
+    }
+  }
+  // ------------------------  Offer Section Ends  ----------------------->
+
   .team-title {
     text-align: center;
     font-size: 3em;
@@ -163,6 +182,10 @@ section {
       border: none;
     }
 
+    .info {
+      height: 250px;
+    }
+
     .info p {
       margin: 0.5em auto;
     }
@@ -179,8 +202,10 @@ section {
       border: none;
     }
 
-    .info p {
+    .info {
+      width: 100%;
       margin: 0.5em auto;
+      height: 250px;
     }
   }
 }
