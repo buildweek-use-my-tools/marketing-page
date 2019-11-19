@@ -6,7 +6,8 @@
 
   img {
     width: 150px;
-    padding-left: 1em;
+    padding-left: 2em 1em;
+    margin: 1em auto 1em 1.2em;
   }
 
   .site-nav {
@@ -37,9 +38,9 @@
     border-bottom: 1px solid #fff;
   }
 
-  .site-nav li:last-child {
-    border-bottom: none;
-  }
+  // .site-nav li:last-child {
+  //   border-bottom: none;
+  // }
 
   .site-nav a {
     color: white;
@@ -51,7 +52,12 @@
 
   .site-nav a:hover {
     background: @main-bg;
-    color: #ecdd7b;
+    color: @header-footer;
+
+    @media @tablet {
+      color: #ce8147;
+      border-bottom: 2px solid #ce8147;
+    }
   }
 
   .site-nav--icon {

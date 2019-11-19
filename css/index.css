@@ -141,7 +141,8 @@ table {
 }
 .container img {
   width: 150px;
-  padding-left: 1em;
+  padding-left: 2em 1em;
+  margin: 1em auto 1em 1.2em;
 }
 .container .site-nav {
   position: absolute;
@@ -168,9 +169,6 @@ table {
 .container .site-nav li {
   border-bottom: 1px solid #fff;
 }
-.container .site-nav li:last-child {
-  border-bottom: none;
-}
 .container .site-nav a {
   color: white;
   text-decoration: none;
@@ -179,8 +177,14 @@ table {
   text-transform: uppercase;
 }
 .container .site-nav a:hover {
-  background: #4d7c8a;
-  color: #ecdd7b;
+  background: #73956f;
+  color: #454851;
+}
+@media (min-width: 800px) {
+  .container .site-nav a:hover {
+    color: #ce8147;
+    border-bottom: 2px solid #ce8147;
+  }
 }
 .container .site-nav--icon {
   display: inline-block;
@@ -262,7 +266,8 @@ footer {
   color: #fff;
 }
 body {
-  background: #4d7c8a;
+  background: #73956f;
+  font-family: "Raleway", sans-serif;
 }
 header {
   padding: 0 0 2em;
@@ -280,7 +285,7 @@ header .header-content p {
   margin: 1.6em auto;
 }
 header .header-content .hero-btn {
-  background: #fff;
+  background: #ce8147;
   color: #454851;
   border: 2px solid #454851;
   border-radius: 10px;
@@ -304,14 +309,14 @@ header .header-content .hero-btn:hover {
   color: #fff;
   border: 1px solid #fff;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   header .header-content p {
     font-size: 2rem;
   }
 }
 .hero {
   width: 100%;
-  background: #4d7c8a;
+  background: #73956f;
 }
 .hero img {
   width: 100%;
@@ -326,7 +331,7 @@ header .header-content .hero-btn:hover {
   padding: 1em;
   color: #fff;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .hero {
     background-image: url(../img/hero-mobile-1600-500.jpg);
     background-size: cover;
@@ -354,7 +359,7 @@ header .header-content .hero-btn:hover {
   }
 }
 section {
-  background: #4d7c8a;
+  background: #73956f;
   width: 100%;
 }
 section .team-title {
@@ -399,4 +404,30 @@ section .card .info p {
 }
 section article:last-of-type {
   border-bottom: none;
+}
+@media (min-width: 800px) {
+  section .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .card {
+    width: 50%;
+    border: none;
+  }
+  section .info p {
+    margin: 0.5em auto;
+  }
+}
+@media (min-width: 1000px) {
+  section .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .card {
+    width: 30%;
+    border: none;
+  }
+  section .info p {
+    margin: 0.5em auto;
+  }
 }

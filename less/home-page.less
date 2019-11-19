@@ -1,5 +1,6 @@
 body {
   background: @main-bg;
+  font-family: "Raleway", sans-serif;
 }
 
 header {
@@ -149,5 +150,37 @@ section {
   }
   article:last-of-type {
     border-bottom: none;
+  }
+
+  @media @tablet {
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 50%;
+      border: none;
+    }
+
+    .info p {
+      margin: 0.5em auto;
+    }
+  }
+
+  @media @desktop {
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 30%;
+      border: none;
+    }
+
+    .info p {
+      margin: 0.5em auto;
+    }
   }
 }
