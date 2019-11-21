@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: @main-bg;
   font-family: "Raleway", sans-serif;
@@ -124,7 +128,22 @@ section {
     text-align: center;
     font-size: 3em;
     color: #fff;
-    padding-top: 1em;
+  }
+  .offer-info {
+    width: 100%;
+    background: #fff;
+    color: @header-footer;
+    padding: 1.5em;
+    margin: 1.5em auto;
+  }
+  @media @tablet {
+    h2 {
+      margin-top: 1em;
+    }
+    .offer-info {
+      padding: 3em;
+      width: 85%;
+    }
   }
 
   .card {
@@ -175,6 +194,12 @@ section {
     .card-wrapper {
       display: flex;
       flex-wrap: wrap;
+
+      @media @desktop {
+        .info {
+          height: 350px;
+        }
+      }
     }
 
     .card {
@@ -183,7 +208,7 @@ section {
     }
 
     .info {
-      height: 250px;
+      height: 350px;
     }
 
     .info p {

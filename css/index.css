@@ -1,3 +1,8 @@
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -307,6 +312,9 @@ footer p {
     padding: 0 2em;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #73956f;
   font-family: "Raleway", sans-serif;
@@ -427,7 +435,22 @@ section .team-title {
   text-align: center;
   font-size: 3em;
   color: #fff;
-  padding-top: 1em;
+}
+section .offer-info {
+  width: 100%;
+  background: #fff;
+  color: #454851;
+  padding: 1.5em;
+  margin: 1.5em auto;
+}
+@media (min-width: 800px) {
+  section h2 {
+    margin-top: 1em;
+  }
+  section .offer-info {
+    padding: 3em;
+    width: 85%;
+  }
 }
 section .card {
   width: 80%;
@@ -476,10 +499,15 @@ section article:last-of-type {
     border: none;
   }
   section .info {
-    height: 250px;
+    height: 350px;
   }
   section .info p {
     margin: 0.5em auto;
+  }
+}
+@media (min-width: 800px) and (min-width: 1000px) {
+  section .card-wrapper .info {
+    height: 350px;
   }
 }
 @media (min-width: 1000px) {
