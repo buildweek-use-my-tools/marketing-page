@@ -1,0 +1,145 @@
+.container {
+  width: 100%;
+  background: @header-footer;
+  display: flex;
+  position: relative;
+
+  img {
+    width: 150px;
+    padding-left: 2em 1em;
+    margin: 1em auto 1em 1.2em;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: @header-footer;
+    -webkit-clip-path: circle(0px at top right);
+    clip-path: circle(0px at top right);
+    -webkit-transition: clip-path ease-in-out 500ms;
+    transition: clip-path ease-in-out 500ms;
+
+    @media @tablet {
+      margin-right: 3rem;
+    }
+  }
+
+  .site-nav--open {
+    -webkit-clip-path: circle(150% at top right);
+    clip-path: circle(150% at top right);
+  }
+
+  .site-nav ul {
+    list-style: none;
+  }
+
+  .site-nav li {
+    border-bottom: 1px solid #fff;
+  }
+
+  // .site-nav li:last-child {
+  //   border-bottom: none;
+  // }
+
+  .site-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 2em 5em 2em 2em;
+    text-transform: uppercase;
+  }
+
+  .site-nav a:hover {
+    background: @main-bg;
+    color: @header-footer;
+
+    @media @tablet {
+      color: #ce8147;
+      border-bottom: 2px solid #ce8147;
+    }
+  }
+
+  .site-nav--icon {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 0.75em;
+    width: 1.75em;
+    text-align: right;
+    color: rgb(255, 255, 255, 0.4);
+  }
+
+  .menu-toggle {
+    padding: 1em;
+
+    position: absolute;
+    top: 1.5em;
+    right: 2.5em;
+    cursor: pointer;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    background: #fff;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+  }
+
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+
+  .hamburger::after {
+    transform: translateY(5px);
+  }
+
+  .open .hamburger {
+    transform: rotate(45deg);
+  }
+
+  .open .hamburger::before {
+    opacity: 0;
+  }
+
+  .open .hamburger::after {
+    transform: translateY(-3.75px) rotate(-90deg);
+  }
+  @media @tablet {
+    .menu-toggle {
+      display: none;
+    }
+
+    .site-nav {
+      height: auto;
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      background: transparent;
+      float: right;
+      clip-path: initial;
+    }
+
+    .site-nav li {
+      display: inline-block;
+      border: none;
+    }
+
+    .site-nav a {
+      padding: 0;
+      margin-left: 1em;
+    }
+
+    .site-nav a:hover {
+      background: transparent;
+    }
+
+    .site-nav .site-nav--icon {
+      display: none;
+    }
+  }
+}
