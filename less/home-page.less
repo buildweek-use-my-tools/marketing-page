@@ -1,0 +1,236 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: @main-bg;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  padding: 0 0 2em;
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+    p {
+      color: #fff;
+      font-size: 1.2rem;
+      margin: 1.6em auto;
+    }
+
+    .hero-btn {
+      .button(@header-footer, 25px);
+      margin: 2em auto;
+    }
+
+    a {
+      text-decoration: none;
+      margin: 2em;
+      width: 80%;
+
+      @media @tablet {
+        width: 40%;
+      }
+    }
+
+    .hero-btn:hover {
+      background: #ce8147;
+      color: #fff;
+      // border: 1px solid #fff;
+    }
+
+    @media @desktop {
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+.hero {
+  width: 100%;
+  background: @main-bg;
+
+  img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 3em, 1.5em;
+    padding: 1em;
+    color: #fff;
+  }
+
+  @media @desktop {
+    background-image: url(../img/hero-mobile-1600-500.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media @tablet {
+    img {
+      display: none;
+    }
+
+    background-image: url(../img/hero-mobile-800-500.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    h1 {
+      margin-top: 2em;
+    }
+  }
+}
+
+//  --------------------------  About Section  --------------------------->
+
+section {
+  background: @main-bg;
+  width: 100%;
+
+  // ------------------------  Offer Section ----------------------------->
+  .offer,
+  .offer-info {
+    color: #fff;
+    padding: 1.5em 1.5em 1.5em 3em;
+    margin: 0 auto;
+    line-height: 1.2;
+    font-size: 1.2rem;
+
+    @media @tablet {
+      padding: 2em 4em;
+    }
+
+    @media @desktop {
+      font-size: 1.7rem;
+    }
+  }
+  // ------------------------  Offer Section Ends  ----------------------->
+
+  .team-title {
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+  }
+  .offer-info {
+    width: 100%;
+    background: #fff;
+    color: @header-footer;
+    padding: 1.5em;
+    margin: 1.5em auto;
+  }
+  @media @tablet {
+    h2 {
+      margin-top: 1em;
+    }
+    .offer-info {
+      padding: 3em;
+      width: 85%;
+    }
+  }
+
+  .card {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #fff;
+
+    h2 {
+      font-size: 1.4em;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 50%;
+      margin: 2em 25%;
+      border: 2px solid @header-footer;
+    }
+
+    .info {
+      width: 70%;
+      background: #fff;
+      margin: -4.5em auto 2em;
+      padding: 4em 3em 1em;
+      text-align: center;
+      border: 2px solid @header-footer;
+
+      .social {
+        width: 100%;
+      }
+
+      a i {
+        font-size: 1.7em;
+        color: @header-footer;
+        padding: 0.2em;
+        margin: 0 auto;
+      }
+
+      p {
+        margin: 1.3em;
+      }
+    }
+  }
+  article:last-of-type {
+    border-bottom: none;
+  }
+
+  @media @tablet {
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media @desktop {
+        .info {
+          height: 350px;
+        }
+      }
+    }
+
+    .card {
+      width: 50%;
+      border: none;
+    }
+
+    .info {
+      height: 350px;
+    }
+
+    .info p {
+      margin: 0.5em auto;
+    }
+  }
+
+  @media @desktop {
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 30%;
+      border: none;
+    }
+
+    .info {
+      width: 100%;
+      margin: 0.5em auto;
+      height: 250px;
+    }
+  }
+}
