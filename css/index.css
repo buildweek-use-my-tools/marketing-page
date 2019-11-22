@@ -467,7 +467,7 @@ section .card img {
   border: 2px solid #454851;
 }
 section .card .info {
-  width: 70%;
+  width: 100%;
   background: #fff;
   margin: -4.5em auto 2em;
   padding: 4em 3em 1em;
@@ -484,7 +484,7 @@ section .card .info a i {
   margin: 0 auto;
 }
 section .card .info p {
-  margin: 1.3em;
+  margin: 1.3em auto;
 }
 section article:last-of-type {
   border-bottom: none;
